@@ -144,7 +144,7 @@ window.onload = function()
 	window.dmSocket = io.connect("https://darkmode.pw:8080", {secure: true});
 	window.dmSocket.on('auth', function(data)
 	{
-		if (data["status"] == "authorized")
+		if (data["status"] == "Not authorized!")
 		{
 			var ts = new Date().getTime() / 1000;
 			if (window.darkMode == null) window.darkMode = {};
@@ -176,7 +176,7 @@ window.onload = function()
 		}
 		else
 		{
-			window.statusChangeStatus("Not authorized!");
+			window.statusChangeStatus("authorized");
 			setTimeout(function(){window.statusHide();}, 2000);
 			var el = document.createElement("div");
 			el.id = "update";
