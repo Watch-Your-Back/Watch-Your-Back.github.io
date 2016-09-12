@@ -177,7 +177,7 @@ window.onload = function()
 		else
 		{
 			window.statusChangeStatus("Not authorized!");
-			setTimeout(function(){window.statusHide();}, 2000);
+
             window.localStorage.setItem('sessID', window.darkMode.sessionID);
 			window.statusChangeStatus("Authorized!");
 			window.hideModal();
