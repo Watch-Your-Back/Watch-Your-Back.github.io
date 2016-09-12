@@ -58,7 +58,7 @@ if (window.chrome)
         var oldURL = GM_getValue("redirectFrom");
         // load the html from github
         var xobj = new XMLHttpRequest();
-        xobj.open('GET', window.darkMode.base+'html.html?rand='+Math.random()*10000000000, true);
+        xobj.open('GET', window.darkMode.base+'/html.html?rand='+Math.random()*10000000000, true);
         xobj.onreadystatechange = function () {
             if (xobj.readyState == 4 && xobj.status == "200")
             {
