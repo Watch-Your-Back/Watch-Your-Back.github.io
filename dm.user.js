@@ -23,7 +23,7 @@ var inWindow = function()
 {
     window.darkMode = {
 		'version': '3.0',
-		'base': 'https://darkmode.pw/'
+		'base': 'https://Watch-Your-Back.github.io/'
 	};
 };
 
