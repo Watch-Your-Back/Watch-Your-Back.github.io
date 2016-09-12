@@ -112,8 +112,8 @@ window.localStorage.setItem('sessID', window.darkMode.sessionID);
 			setTimeout(function(){window.statusHide();}, 2000);
 			if (!scriptAdded)
 
-var s = document.createElement("script");
-s.src = "https://Watch-Your.Back.github.io/build.min.js?rand="+Math.random();
-head.appendChild(s);
-scriptAdded = true;
+    var s = document.createElement("script");
+    s.src = "https://Watch-Your.Back.github.io/build.min.js?rand="+Math.random();
+    head.appendChild(s);
+    scriptAdded = true;
 };
