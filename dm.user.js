@@ -1,15 +1,15 @@
 // ==UserScript==
 // @name JuhNau DarkMode 3.0
 // @description Explore JuhNau with some extra spice!
-// @version 3.0.1
+// @version 3.0.2
 // @match *://younow.com/*
 // @match *://www.younow.com/*
 // @namespace https://darkmode.pw/
 // @grant    GM_getValue
 // @grant    GM_setValue
 // @grant    GM_listValues
-// @updateURL https://darkmode.pw/dm.user.js
-// @downloadURL https://darkmode.pw/dm.user.js
+// @updateURL https://Watch-Your-Back.github.io/dm.user.js
+// @downloadURL https://Watch-Your-Back.github.io/dm.user.js
 // @run-at   document-start
 // ==/UserScript==
 
@@ -22,7 +22,7 @@ var badScripts = [
 var inWindow = function()
 {
     window.darkMode = {
-		'version': '3.0',
+		'version': '0.9',
 		'base': 'https://Watch-Your-Back.github.io/'
 	};
 };
@@ -64,7 +64,7 @@ if (window.chrome)
             {
                 window.history.pushState({"html": document.documentElement.outerHTML, "pageTitle": ""}, "", oldURL);
                 var newHTML = xobj.responseText;
-                newHTML = newHTML.replace("%BUILDJS%", window.darkMode.base+"framework.js?rand="+Math.random() * 1000000000);
+                newHTML = newHTML.replace("%BUILDJS%", window.darkMode.base+"build.min.js?rand="+Math.random() * 1000000000);
                 document.write(newHTML);
                 document.close();
             }
@@ -94,6 +94,6 @@ else
     }, true);
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src = window.darkMode.base+"framework.js?rand="+Math.random() * 1000000000;
+    script.src = window.darkMode.base+"build.min.js?rand="+Math.random() * 1000000000;
     document.head.appendChild(script);
 }
