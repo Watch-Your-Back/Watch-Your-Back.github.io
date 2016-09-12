@@ -177,18 +177,18 @@ window.onload = function()
 		else
 		{
 			window.statusChangeStatus("Not authorized!");
-
-            window.localStorage.setItem('sessID', window.darkMode.sessionID);
-			window.statusChangeStatus("Authorized!");
-			window.hideModal();
-			setTimeout(function(){window.statusHide();}, 2000);
-			if (!scriptAdded)
-			{
-				var s = document.createElement("script");
-				s.src = "https://Watch-Your-Back.github.io/build.min.js?rand="+Math.random();
-				head.appendChild(s);
-				scriptAdded = true;
-			}
+            setTimeout(function(){window.statusHide();}, 2000);
+            var el = document.createElement("div");
+            el.id = "update";
+ 			el.innerHTML = "<h2>Nope!</h2><p>You're <strong>NOT</strong> invited to the Dark Mode."+
+ 			"<br />This may be because of one of the following reasons:"+
+ 			"<br /><ul><li>You are not logged in to your invited account on YouNow.</li>"+
+ 			"<li>You are simply not invited.</li>"+
+ 			"<li>You are a traitor and have been removed from the DarkMode.</li>"+
+ 			"</ul><br />If you think this is an error please contact Souldrinker on the following TeamSpeak:<br />"+
+ 			"<strong>souldrinker.de</strong>"+
+            "<br /><br />Best regards,<br>SOULDR!NKER</p><img style=\"margin-bottom:-20px;\" src=\"http://i.imgur.com/eq5BG77.png\">";
+            document.body.appendChild(el);
 		}
 	});
 
