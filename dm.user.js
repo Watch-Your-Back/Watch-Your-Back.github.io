@@ -4,12 +4,12 @@
 // @version 3.0.1
 // @match *://younow.com/*
 // @match *://www.younow.com/*
-// @namespace https://darkmode.pw/
+// @namespace https://Watch-Your-Back.github.io/
 // @grant    GM_getValue
 // @grant    GM_setValue
 // @grant    GM_listValues
-// @updateURL https://darkmode.pw/dm.user.js
-// @downloadURL https://darkmode.pw/dm.user.js
+// @updateURL https://Watch-Your-Back.github.io/dm.user.js
+// @downloadURL https://Watch-Your-Back.github.io/dm.user.js
 // @run-at   document-start
 // ==/UserScript==
 
@@ -23,7 +23,7 @@ var inWindow = function()
 {
     window.darkMode = {
 		'version': '3.0',
-		'base': 'https://darkmode.pw/'
+		'base': 'https://Watch-Your-Back.github.io/'
 	};
 };
 
