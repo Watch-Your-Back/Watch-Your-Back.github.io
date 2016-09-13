@@ -4,12 +4,12 @@
 // @version 3.0.1
 // @match *://younow.com/*
 // @match *://www.younow.com/*
-// @namespace https://Watch-Your-Back.github.io
+// @namespace https://darkmode.pw/
 // @grant    GM_getValue
 // @grant    GM_setValue
 // @grant    GM_listValues
-// @updateURL https://Watch-Your-Back.github.io/dm.user.js
-// @downloadURL https://Watch-Your-Back.github.io/dm.user.js
+// @updateURL https://darkmode.pw/dm.user.js
+// @downloadURL https://darkmode.pw/dm.user.js
 // @run-at   document-start
 // ==/UserScript==
 
@@ -23,7 +23,7 @@ var inWindow = function()
 {
     window.darkMode = {
 		'version': '3.0',
-		'base': 'Watch-Your-Back.github.io/'
+		'base': 'https://darkmode.pw/'
 	};
 };
 
@@ -58,7 +58,7 @@ if (window.chrome)
         var oldURL = GM_getValue("redirectFrom");
         // load the html from github
         var xobj = new XMLHttpRequest();
-        xobj.open('GET', window.darkMode.base+'/html.html?rand='+Math.random()*10000000000, true);
+        xobj.open('GET', window.darkMode.base+'html.html?rand='+Math.random()*10000000000, true);
         xobj.onreadystatechange = function () {
             if (xobj.readyState == 4 && xobj.status == "200")
             {
